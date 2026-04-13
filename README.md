@@ -45,7 +45,7 @@ Each agent performs a specific task and passes structured outputs to the next st
 ---
 
 ## 📁 Project Structure
-
+```
 legal-ai-agent/
 │
 ├── app.py                  # Streamlit UI
@@ -73,7 +73,7 @@ legal-ai-agent/
 │   └── pdf_reader.py
 │
 └── chroma_db/              # Vector DB (optional)
-
+```
 ---
 
 ## ⚙️ Installation & Setup
