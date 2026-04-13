@@ -1,0 +1,27 @@
+from utils.llm import call_llm
+
+def compliance_agent(state):
+    clauses = state["clauses"][:8]
+
+    contract = "\n".join(clauses)
+
+    prompt = f"""
+Check this contract for compliance issues.
+
+Required clauses:
+- Termination
+- Payment
+- Liability
+- Confidentiality
+
+CONTRACT:
+{contract}
+
+OUTPUT:
+- Missing clauses
+- Issues found
+"""
+
+    result = call_llm(prompt)
+
+    return {"compliance_issues": [result]}

@@ -1,0 +1,10 @@
+streamlit
+langgraph
+langchain
+chromadb
+google-generativeai
+pydantic
+langchain-community
+sentence-transformers
+pymupdf
+reportlab
