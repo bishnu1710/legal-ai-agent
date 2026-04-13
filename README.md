@@ -27,7 +27,7 @@ https://ai-data-science-agent-bishnu.streamlit.app/
 ## 🏗️ Architecture
 
 The system follows a **multi-agent pipeline**:
-
+```
 Parser Agent  
 ↓  
 Classifier Agent  
@@ -41,7 +41,7 @@ Compliance Agent
 Report Agent  
 
 Each agent performs a specific task and passes structured outputs to the next stage.
-
+```
 ---
 
 ## 📁 Project Structure
@@ -79,40 +79,41 @@ legal-ai-agent/
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone Repository
-
+```
 git clone https://github.com/YOUR_USERNAME/legal-ai-agent.git  
 cd legal-ai-agent  
-
+```
 ---
 
 ### 2️⃣ Create Virtual Environment
-
+```
 python -m venv venv  
 venv\Scripts\activate   # Windows  
-
+```
 ---
 
 ### 3️⃣ Install Dependencies
-
+```
 pip install -r requirements.txt  
-
+```
 ---
 
 ### 4️⃣ Environment Variables
-
+```
 Create a `.env` file in the root directory:
 
 GROQ_API_KEY=your_api_key_here  
-
+```
 ---
 
 ## ▶️ Run the Application
-
+```
 python -m streamlit run app.py  
-
-Then open:  
+```
+Then open:
+```
 http://localhost:8501  
-
+```
 ---
 
 ## 🧪 How It Works
