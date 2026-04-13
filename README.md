@@ -157,9 +157,12 @@ http://localhost:8501
 
 ## 👨‍💻 Author
 ---
-**Bishnu Agarwal**  
-M.Tech'26 (CSDP - Computer Science and Data Processing),<br>
-IIT Kharagpur  
+# Bishnu Agarwal
+
+### M.Tech '26 (CSDP - Computer Science and Data Processing)  
+### IIT Kharagpur
+
+--- 
 ---
 
 ## ⭐ Support
