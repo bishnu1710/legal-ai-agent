@@ -173,6 +173,4 @@ AI / ML / Data Science
 
 If you like this project:
 
-⭐ Star the repository  
-🍴 Fork it  
-📢 Share it  
+⭐ Star the repository      🍴 Fork it          📢 Share it  
