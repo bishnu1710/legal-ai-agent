@@ -99,9 +99,9 @@ pip install -r requirements.txt
 ---
 
 ### 4️⃣ Environment Variables
-```
-Create a `.env` file in the root directory:
 
+Create a '.env' file in the root directory:
+```
 GROQ_API_KEY=your_api_key_here  
 ```
 ---
@@ -146,7 +146,7 @@ http://localhost:8501
 
 ## 🔐 Security Note
 
-- Do NOT commit `.env` file  
+- Do NOT commit '.env' file  
 - Keep API keys private  
 
 ---
