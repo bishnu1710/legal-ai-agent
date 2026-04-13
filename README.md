@@ -156,17 +156,16 @@ http://localhost:8501
 ---
 
 ## 👨‍💻 Author
----
+
 #### Bishnu Agarwal  
 M.Tech '26 (CSDP - Computer Science and Data Processing),<br> IIT Kharagpur  
 
-
-
---- 
 ---
 
 ## ⭐ Support
 
 If you like this project:
 
-⭐ Star the repository      🍴 Fork it          📢 Share it  
+⭐ Star the repository      
+🍴 Fork it          
+📢 Share it  
