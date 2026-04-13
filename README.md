@@ -6,8 +6,8 @@ An AI-powered system that analyzes legal contracts using a **multi-agent archite
 
 ## 🚀 Live Demo
 
-👉 Streamlit App:  
-https://ai-data-science-agent-bishnu.streamlit.app/
+
+[![Open App](https://img.shields.io/badge/Streamlit-Live_App-red?logo=streamlit)](https://legal-ai-agent-bishnu.streamlit.app/)
 
 ---
 
