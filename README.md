@@ -6,8 +6,8 @@ An AI-powered system that analyzes legal contracts using a **multi-agent archite
 
 ## 🚀 Live Demo
 
-👉 Streamlit App:  
-https://ai-data-science-agent-bishnu.streamlit.app/
+
+[![Open App](https://img.shields.io/badge/Streamlit-Live_App-red?logo=streamlit)](https://legal-ai-agent-bishnu.streamlit.app/)
 
 ---
 
@@ -27,7 +27,7 @@ https://ai-data-science-agent-bishnu.streamlit.app/
 ## 🏗️ Architecture
 
 The system follows a **multi-agent pipeline**:
-
+```
 Parser Agent  
 ↓  
 Classifier Agent  
@@ -41,11 +41,11 @@ Compliance Agent
 Report Agent  
 
 Each agent performs a specific task and passes structured outputs to the next stage.
-
+```
 ---
 
 ## 📁 Project Structure
-
+```
 legal-ai-agent/
 │
 ├── app.py                  # Streamlit UI
@@ -73,46 +73,47 @@ legal-ai-agent/
 │   └── pdf_reader.py
 │
 └── chroma_db/              # Vector DB (optional)
-
+```
 ---
 
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone Repository
-
+```
 git clone https://github.com/YOUR_USERNAME/legal-ai-agent.git  
 cd legal-ai-agent  
-
+```
 ---
 
 ### 2️⃣ Create Virtual Environment
-
+```
 python -m venv venv  
 venv\Scripts\activate   # Windows  
-
+```
 ---
 
 ### 3️⃣ Install Dependencies
-
+```
 pip install -r requirements.txt  
-
+```
 ---
 
 ### 4️⃣ Environment Variables
 
-Create a `.env` file in the root directory:
-
+Create a '.env' file in the root directory:
+```
 GROQ_API_KEY=your_api_key_here  
-
+```
 ---
 
 ## ▶️ Run the Application
-
+```
 python -m streamlit run app.py  
-
-Then open:  
+```
+Then open:
+```
 http://localhost:8501  
-
+```
 ---
 
 ## 🧪 How It Works
@@ -137,15 +138,9 @@ http://localhost:8501
 
 ---
 
-## 📸 Screenshots
-
-(Add screenshots here)
-
----
-
 ## 🔐 Security Note
 
-- Do NOT commit `.env` file  
+- Do NOT commit '.env' file  
 - Keep API keys private  
 
 ---
@@ -162,9 +157,8 @@ http://localhost:8501
 
 ## 👨‍💻 Author
 
-**Bishnu Agarwal**  
-M.Tech (CSDP - Computer Science and Data Processing), IIT Kharagpur  
-AI / ML / Data Science  
+#### Bishnu Agarwal  
+M.Tech '26 (CSDP - Computer Science and Data Processing),<br> IIT Kharagpur  
 
 ---
 
@@ -172,6 +166,6 @@ AI / ML / Data Science
 
 If you like this project:
 
-⭐ Star the repository  
-🍴 Fork it  
+⭐ Star the repository      
+🍴 Fork it          
 📢 Share it  
