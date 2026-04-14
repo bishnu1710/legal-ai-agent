@@ -44,10 +44,10 @@ Each agent performs a specific task and passes structured outputs to the next st
 ```
 ---
 
-## 📸 Demo Preview
+
 
 ## 📸 Demo Preview
-```
+
 <p align="center">
   <img src="./assets/ss1.png" width="45%">
   <img src="./assets/ss2.png" width="45%">
@@ -57,7 +57,7 @@ Each agent performs a specific task and passes structured outputs to the next st
   <img src="./assets/ss3.png" width="45%">
   <img src="./assets/ss4.png" width="45%">
 </p>
-```
+
 
 ---
 ## 📁 Project Structure
