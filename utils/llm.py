@@ -3,14 +3,14 @@ import time
 from groq import Groq
 from dotenv import load_dotenv
 
-# ✅ LOAD ENV FILE
+# LOAD ENV FILE
 load_dotenv()
 
 def call_llm(prompt: str) -> str:
     try:
         time.sleep(1)
 
-        # ✅ GET API KEY FROM .env
+        # GET API KEY FROM .env
         api_key = os.getenv("GROQ_API_KEY")
 
         if not api_key:

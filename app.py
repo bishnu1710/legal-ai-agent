@@ -1,3 +1,5 @@
+# @bishnu- legal_ai_agent app.py
+
 import streamlit as st
 from graph.workflow import run_workflow
 from utils.pdf_reader import extract_text_from_pdf
@@ -23,14 +25,14 @@ def generate_pdf(text):
     return buffer
 
 
-# 🔥 PAGE CONFIG
+# PAGE CONFIG
 st.set_page_config(
     page_title="Legal AI Agent",
     layout="wide",
     page_icon="⚖️"
 )
 
-# 🎨 CUSTOM CSS
+# CUSTOM CSS
 st.markdown("""
 <style>
 .main {
@@ -58,13 +60,13 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# 🏷️ HEADER
+#  HEADER
 st.markdown('<div class="title">⚖️ Multi-Agent Legal Document Analyzer</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle">AI-powered contract analysis using multi-agent systems</div>', unsafe_allow_html=True)
 
 st.divider()
 
-# 📄 INPUT SECTION
+#  INPUT SECTION
 st.markdown("### 📄 Upload or Enter Document")
 
 uploaded_file = st.file_uploader("Upload Contract (PDF or TXT)", type=["pdf", "txt"])
@@ -92,13 +94,13 @@ if uploaded_file:
             unsafe_allow_html=True
         )
 
-# ✍️ MANUAL INPUT
+#  MANUAL INPUT
 manual_text = st.text_area("Or paste document manually")
 
 if manual_text:
     text_input = manual_text
 
-# 🚀 ANALYZE BUTTON
+#  ANALYZE BUTTON
 if st.button("🚀 Analyze Document"):
     if text_input.strip() == "":
         st.warning("⚠️ Please upload or enter a document.")
@@ -108,7 +110,7 @@ if st.button("🚀 Analyze Document"):
 
         st.divider()
 
-        # 📊 FINAL REPORT (CLEAN + STYLED)
+        # FINAL REPORT (CLEAN + STYLED)
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("## 📊 Final Report")
 
@@ -136,10 +138,10 @@ if st.button("🚀 Analyze Document"):
             file_name="legal_report.pdf",
             mime="application/pdf"
         )
-        # 📊 RISKS & COMPLIANCE
+        #  RISKS & COMPLIANCE
         col1, col2 = st.columns(2)
 
-        # 🔴 RISKS
+        #  RISKS
         with col1:
             st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("### ⚠️ Risks")
@@ -187,7 +189,7 @@ if st.button("🚀 Analyze Document"):
 
             st.markdown('</div>', unsafe_allow_html=True)
 
-        # 📋 COMPLIANCE
+        #  COMPLIANCE
         with col2:
             st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("### 📋 Compliance Issues")
@@ -201,7 +203,7 @@ if st.button("🚀 Analyze Document"):
 
             st.markdown('</div>', unsafe_allow_html=True)
 
-        # 🧠 EXPLANATIONS (FIXED NUMBERING)
+        # EXPLANATIONS (FIXED NUMBERING)
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("### 🧠 Clause Explanations")
 
@@ -216,7 +218,7 @@ if st.button("🚀 Analyze Document"):
             for line in lines:
                 line = line.strip()
 
-                # 🔥 fix duplicate numbering
+                # fix duplicate numbering
                 line = re.sub(r"^(\d+)\.\s*(\d+)\.", r"\1.", line)
 
                 if line:

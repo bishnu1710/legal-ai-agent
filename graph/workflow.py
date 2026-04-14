@@ -8,7 +8,7 @@ from agents.explanation_agent import explanation_agent
 from agents.compliance_agent import compliance_agent
 from agents.report_agent import report_agent
 
-# ✅ NEW: Aggregator node
+#Aggregator node
 def aggregator_agent(state):
     # Just passes state forward (ensures all branches complete)
     return state
@@ -33,7 +33,7 @@ def build_graph():
     builder.add_node("risk", risk_agent)
     builder.add_node("explanation", explanation_agent)
     builder.add_node("compliance", compliance_agent)
-    builder.add_node("aggregator", aggregator_agent)  # ✅ NEW
+    builder.add_node("aggregator", aggregator_agent)  
     builder.add_node("report", report_agent)
 
     # Entry

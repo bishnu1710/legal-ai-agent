@@ -2,10 +2,10 @@ from rag.memory_store import retrieve_similar_contracts
 from utils.llm import call_llm
 
 def risk_agent(state):
-    # ✅ GET CLAUSES
+    #  GET CLAUSES
     clauses = state["clauses"]
 
-    # 🔥 LIMIT CLAUSES (PUT IT HERE)
+    #  LIMIT CLAUSES 
     clauses = clauses[:8]
 
     # Combine clauses
