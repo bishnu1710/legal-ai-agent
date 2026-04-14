@@ -1,4 +1,6 @@
-from langchain.vectorstores import Chroma
+# @bishnu- legal_ai_agent vector_store.py
+
+rom langchain.vectorstores import Chroma
 from langchain.embeddings import OpenAIEmbeddings
 
 def create_vector_store(docs):

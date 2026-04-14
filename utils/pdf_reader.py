@@ -1,3 +1,5 @@
+# @bishnu- legal_ai_agent pdf_reader.py
+
 import fitz  # PyMuPDF
 
 def extract_text_from_pdf(file):
