@@ -10,7 +10,7 @@ load_dotenv()
 
 def call_llm(prompt: str, max_tokens: int = 600) -> str:
     try:
-        time.sleep(1)
+        time.sleep(3)
 
         # GET API KEY FROM .env
         api_key = os.getenv("GROQ_API_KEY")
