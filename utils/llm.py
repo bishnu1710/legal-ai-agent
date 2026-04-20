@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 # LOAD ENV FILE
 load_dotenv()
 
-def call_llm(prompt: str) -> str:
+def call_llm(prompt: str, max_tokens: int = 600) -> str:
     try:
         time.sleep(1)
 
@@ -24,10 +24,10 @@ def call_llm(prompt: str) -> str:
             model="llama-3.1-8b-instant",
             messages=[
                 {"role": "system", "content": "Be concise and structured."},
-                {"role": "user", "content": prompt[:2000]}  # limit tokens
+                {"role": "user", "content": prompt[:5000]}  # limit tokens
             ],
             temperature=0.3,
-            max_tokens=400
+            max_tokens=max_tokens
         )
 
         return response.choices[0].message.content.strip()

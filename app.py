@@ -7,6 +7,8 @@ import re
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 from io import BytesIO
+from rag.memory_store import save_contract
+
 
 def generate_pdf(text):
     buffer = BytesIO()
@@ -106,24 +108,67 @@ if st.button("🚀 Analyze Document"):
         st.warning("⚠️ Please upload or enter a document.")
     else:
         with st.spinner("🤖 AI agents analyzing contract..."):
-            result = run_workflow(text_input)
+            try:
+                result = run_workflow(text_input)
+                save_contract(text_input[:3000])
+            except Exception as e:
+                st.error(f"❌ Analysis failed: {str(e)}")
+                st.stop()
 
         st.divider()
 
-        # FINAL REPORT (CLEAN + STYLED)
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("## 📊 Final Report")
 
         report_text = result["final_report"]
         report_text = re.sub(r"\*\*(.*?)\*\*", r"\1", report_text)
         report_text = report_text.replace("\\n", "\n")
         report_text = report_text.replace("[", "").replace("]", "")
 
+        # Table styling
+        table_style = """
+        <style>
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin: 16px 0;
+        }
+        .legal-table thead tr {
+            background-color: #1f2937;
+            color: #ffffff;
+        }
+        .legal-table th, .legal-table td {
+            padding: 10px 14px;
+            border: 1px solid #e5e7eb;
+            text-align: left;
+            vertical-align: top;
+        }
+        .legal-table tbody tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        .legal-table tbody tr:hover {
+            background-color: #f0f4ff;
+        }
+        .legal-table td:nth-child(3) {
+            font-weight: bold;
+        }
+        </style>
+        """
+
+        # Add class to table and color risk levels
+        report_html = report_text.replace("<table>", '<table class="legal-table">')
+        report_html = re.sub(r'(?<!\w)(High)(?!\w)',
+            r'<span style="color:#dc2626">🔴 \1</span>', report_html)
+        report_html = re.sub(r'(?<!\w)(Medium)(?!\w)',
+            r'<span style="color:#d97706">🟠 \1</span>', report_html)
+        report_html = re.sub(r'(?<!\w)(Low)(?!\w)',
+            r'<span style="color:#16a34a">🟢 \1</span>', report_html)
+
+        st.markdown(table_style, unsafe_allow_html=True)
         st.markdown(
             f"""
             <div style='background:#ffffff; padding:20px; border-radius:12px;
                         border:1px solid #e5e7eb; line-height:1.6'>
-            {report_text}
+            {report_html}
             </div>
             """,
             unsafe_allow_html=True

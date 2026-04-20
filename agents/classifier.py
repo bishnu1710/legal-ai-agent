@@ -23,7 +23,7 @@ Options:
 CLAUSES:
 {clauses_text}
 
-OUTPUT:
+OUTPUT (use ONLY these exact category names — no combinations):
 1. Clause number → Category
 """
 

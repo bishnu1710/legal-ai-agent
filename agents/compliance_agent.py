@@ -16,6 +16,11 @@ Required clauses:
 - Liability
 - Confidentiality
 
+RULES:
+- Read each clause carefully before flagging it as an issue
+- Only flag something as missing if it is truly absent
+- Do not misrepresent what a clause says
+
 CONTRACT:
 {contract}
 

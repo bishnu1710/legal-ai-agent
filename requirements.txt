@@ -5,7 +5,8 @@ chromadb
 google-generativeai
 pydantic
 langchain-community
-sentence-transformers
+# sentence-transformers
 pymupdf
 reportlab
 groq
+langchain-openai
